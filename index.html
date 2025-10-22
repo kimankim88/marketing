@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♨️ [상호명] 샤브샤브: 신선함이 끓어오르는 곳</title>
+    <!-- Tailwind CSS CDN 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter 폰트 설정 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f0; /* 따뜻한 배경색 */
+        }
+        /* 히어로 비디오를 위한 오버레이와 컨테이너 스타일 */
+        .hero-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            z-index: 10;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.45); /* 텍스트 가독성을 위한 어두운 오버레이 */
+            z-index: 20;
+        }
+        .hero-content {
+            z-index: 30;
+        }
+        /* 콘텐츠 섹션 비디오 스타일 */
+        .content-video {
+            aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <!-- 1. 히어로 섹션 (Hero Section) - 배경 비디오 (z00.mp4) -->
+    <section class="hero-container flex flex-col justify-center items-center text-white">
+        <!-- z00.mp4: 끓는 육수와 재료 투입 (슬로우 모션) -->
+        <video playsinline autoplay muted loop class="hero-video">
+            <source src="video/z00.mp4" type="video/mp4">
+            <!-- 사용자 브라우저가 비디오를 지원하지 않을 경우 대체 이미지 표시 -->
+            <img src="https://placehold.co/1920x1080/7e3a3a/ffffff?text=Video+Not+Supported" alt="샤브샤브 한상차림" class="min-w-full min-h-full object-cover">
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content text-center max-w-4xl p-6">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-pulse">
+                신선함이 끓어오르는 순간
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light tracking-wide">
+                [상호명]에서 맛보는 최고의 샤브샤브, 지금 바로 경험하세요.
+            </p>
+            <a href="#cta" class="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                예약/주문 바로가기 &rarr;
+            </a>
+        </div>
+    </section>
+
+    <!-- 2. 핵심 가치 소개 섹션 -->
+    <section id="features" class="py-20 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-red-700">왜 [상호명] 샤브샤브인가요?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- FEATURE 1: 신선한 육류 (z01.mp4) -->
+                <div class="bg-white p-6 rounded-xl shadow-2xl overflow-hidden">
+                    <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-md">
+                        <source src="video/z01.mp4" type="video/mp4">
+                        <img src="https://placehold.co/600x400/fecaca/9f1239?text=Fresh+Meat" alt="신선한 육류">
+                    </video>
+                    <h3 class="text-2xl font-semibold mb-3">🥇 최상급 마블링 육류</h3>
+                    <p class="text-gray-600">
+                        엄선된 1등급 소고기/돼지고기를 사용합니다. 눈으로 확인하는 선명한 마블링과 입안에서 사르르 녹는 부드러움을 느껴보세요. (영상 출처: z01.mp4)
+                    </p>
+                </div>
+
+                <!-- FEATURE 2: 다채로운 채소 (z02.mp4) -->
+                <div class="bg-white p-6 rounded-xl shadow-2xl overflow-hidden">
+                    <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-md">
+                        <source src="video/z02.mp4" type="video/mp4">
+                        <img src="https://placehold.co/600x400/d1fae5/065f46?text=Vegetable+Platter" alt="다채로운 채소">
+                    </video>
+                    <h3 class="text-2xl font-semibold mb-3">🌿 매일 공수하는 싱싱한 채소</h3>
+                    <p class="text-gray-600">
+                        배추, 청경채, 버섯 등 샤브샤브에 최적화된 채소들을 매일 아침 직송받아 제공합니다. 건강하고 아삭한 식감을 즐기세요. (영상 출처: z02.mp4)
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 매장 경험 및 마무리 섹션 -->
+    <section class="py-20 px-4 md:px-8 bg-white/70">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-red-700">즐거운 순간의 마무리</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- CONTENT 1: 함께하는 즐거움 (z03.mp4) -->
+                <div class="md:col-span-2 p-6 rounded-xl shadow-xl bg-gray-50 overflow-hidden">
+                    <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-lg">
+                        <source src="video/z03.mp4" type="video/mp4">
+                        <img src="https://placehold.co/800x450/e0f2f1/1f2937?text=Dining+Experience" alt="식사 장면">
+                    </video>
+                    <h3 class="text-2xl font-semibold mb-2">🧑‍🤝‍🧑 모두가 만족하는 식사 경험</h3>
+                    <p class="text-gray-600">
+                        가족, 연인, 직장 동료 등 소중한 사람들과 함께 맛있는 음식을 나누며 특별한 추억을 만들어보세요. (영상 출처: z03.mp4)
+                    </p>
+                </div>
+
+                <!-- CONTENT 2: 마무리의 화룡점정 (정적 요소) -->
+                <div class="md:col-span-1 flex flex-col justify-center items-center text-center p-6 rounded-xl shadow-xl bg-red-50 border-2 border-red-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-red-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 8a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1zm1 3a1 1 0 100 2h4a1 1 0 100-2H8z" clip-rule="evenodd" />
+                    </svg>
+                    <h3 class="text-2xl font-semibold mb-2 text-red-700">🍜 칼국수 &amp; 영양죽</h3>
+                    <p class="text-gray-700">
+                        진하게 우러난 육수에 칼국수 또는 고소한 영양죽으로 완벽한 마무리를 경험하세요. 샤브샤브 코스의 화룡점정입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 이벤트 및 CTA (Call to Action) 섹션 -->
+    <section id="cta" class="py-16 px-4 md:px-8 bg-red-700 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            
+            <!-- 이벤트 배너 (z04.mp4 - 대체 사용) -->
+            <div class="bg-red-800 p-6 md:p-10 rounded-xl shadow-3xl mb-12 border-4 border-yellow-300">
+                <h2 class="text-4xl font-extrabold mb-2 text-yellow-300">🎉 특별 이벤트! 놓치지 마세요!</h2>
+                <p class="text-2xl mb-4 font-semibold">
+                    평일 **점심 특선** 1인분 **12,900원**! (오후 3시까지)
+                </p>
+                <p class="text-xl">
+                    *현재 오픈 기념 2+1 이벤트 진행 중! (자세한 내용은 매장 문의)*
+                </p>
+            </div>
+
+            <h3 class="text-3xl font-bold mb-8">지금 바로 예약하고 샤브샤브를 즐기세요!</h3>
+            
+            <!-- CTA 버튼 그룹 -->
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                
+                <!-- 예약 버튼 -->
+                <a href="tel:000-0000-0000" class="flex items-center justify-center bg-white text-red-700 hover:bg-gray-100 text-xl font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.772-1.549a1 1 0 011.06-.54l4.435.74A1 1 0 0118 16.847V17a1 1 0 01-1 1H3a1 1 0 01-1-1v-14z" />
+                    </svg>
+                    전화 예약하기
+                </a>
+
+                <!-- 배달 주문 버튼 -->
+                <a href="[배달앱_링크_입력]" target="_blank" class="flex items-center justify-center bg-gray-800 text-white hover:bg-gray-900 text-xl font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 10a1 1 0 002 0V8a1 1 0 10-2 0v2zM7.5 7a.5.5 0 000 1h5a.5.5 0 000-1h-5z" clip-rule="evenodd" />
+                      <path d="M11 12a1 1 0 10-2 0v2a1 1 0 102 0v-2z" />
+                    </svg>
+                    배달 주문하기
+                </a>
+                
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- 5. 푸터 (Footer) -->
+    <footer class="py-8 bg-gray-900 text-white text-center text-sm">
+        <div class="max-w-6xl mx-auto">
+            <p class="mb-2">[상호명] | 주소: 서울특별시 OOO구 OOO동 123-4 | 전화번호: 000-0000-0000</p>
+            <p>Copyright &copy; 2025 [상호명] Shabu-shabu. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
