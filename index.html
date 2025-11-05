@@ -3,24 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LT4HSDV7W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-2LT4HSDV7W');
-</script>
-    
-    
-    <meta property="og:title" content="전원원 - 신선함이 끓어오르는 곳">
-    <meta property="og:description" content="프리미엄 샤브샤브 전원원, 신선함이 끓어오르는 순간.">
-    <meta property="og:image" content="img01.jpg">
-    <meta property="og:url" content="https://kimankim88.github.io/marketing">
-    <meta property="og:type" content="website">
-
-    <title>♨️ [전원원] 샤브샤브: 신선함이 끓어오르는 곳</title>
+    <title>📝 고객 후기 | 전원원 샤브샤브</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
@@ -28,55 +11,17 @@
             font-family: 'Inter', sans-serif;
             background-color: #f7f3f0; /* 따뜻한 배경색 */
         }
-        /* 히어로 비디오를 위한 오버레이와 컨테이너 스타일 */
-        .hero-container {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .hero-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            object-fit: cover;
-            z-index: 10;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.45); /* 텍스트 가독성을 위한 어두운 오버레이 */
-            z-index: 20;
-        }
-        .hero-content {
-            z-index: 30;
-        }
-        /* 콘텐츠 섹션 비디오 스타일 */
-        .content-video {
-            aspect-ratio: 16 / 9; /* 16:9 비율 유지 */
-            width: 100%;
-            height: auto;
-        }
-        
-        /* 추가된 네비게이션 바 스타일 */
+        /* 네비게이션 바 고정 스타일 */
         .nav-fixed {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            z-index: 50; /* 히어로 오버레이보다 위에 위치 */
-            background-color: rgba(0, 0, 0, 0.6); /* 반투명 배경 */
+            z-index: 50;
+            background-color: rgba(0, 0, 0, 0.8); /* index.html보다 조금 더 진하게 설정 */
         }
-        /* 히어로 섹션에 네비게이션 바 공간을 확보하기 위한 패딩 추가 */
-        .hero-container {
-            padding-top: 64px; /* 네비게이션 높이 (h-16)에 맞춤 */
+        main {
+            padding-top: 80px; /* 고정된 네비게이션 바 높이만큼 공간 확보 */
         }
     </style>
 </head>
@@ -84,131 +29,126 @@
 
     <nav class="nav-fixed h-16 flex justify-between items-center px-4 md:px-8 shadow-lg">
         <div class="text-xl font-bold text-white">
-            <a href="/">♨️ [전원원] 샤브샤브</a>
+            <a href="index.html">♨️ [전원원] 샤브샤브</a>
         </div>
         <div class="flex space-x-6">
-            <a href="#features" class="text-white hover:text-red-300 transition duration-300">메뉴 소개</a>
-            <a href="#cta" class="text-white hover:text-red-300 transition duration-300">예약/이벤트</a>
-            <a href="usercomment.html" class="text-yellow-300 font-bold hover:text-yellow-100 transition duration-300">고객 후기</a>
+            <a href="index.html#features" class="text-white hover:text-red-300 transition duration-300">메뉴 소개</a>
+            <a href="index.html#cta" class="text-white hover:text-red-300 transition duration-300">예약/이벤트</a>
+            <a href="#" class="text-yellow-300 font-bold hover:text-yellow-100 transition duration-300">고객 후기</a>
         </div>
     </nav>
-    
-    <section class="hero-container flex flex-col justify-center items-center text-white">
-        <video playsinline autoplay muted loop class="hero-video">
-            <source src="video/z00.mp4" type="video/mp4">
-            <img src="https://placehold.co/1920x1080/7e3a3a/ffffff?text=Video+Not+Supported" alt="샤브샤브 한상차림" class="min-w-full min-h-full object-cover">
-        </video>
-        <div class="overlay"></div>
-        <div class="hero-content text-center max-w-4xl p-6">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-pulse">
-                신선함이 끓어오르는 순간
+
+    <main class="min-h-screen">
+        <div class="max-w-4xl mx-auto py-12 px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-10 text-red-700">
+                ⭐ 고객 후기 게시판
             </h1>
-            <p class="text-xl md:text-2xl mb-8 font-light tracking-wide">
-                [전원원]에서 맛보는 최고의 샤브샤브, 지금 바로 경험하세요.
+            <p class="text-center text-lg text-gray-600 mb-10">
+                [전원원]에서 경험하신 신선하고 따뜻한 순간을 공유해 주세요!
             </p>
-            <a href="#cta" class="inline-block bg-red-600 hover:bg-red-700 text-white text-lg font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
-                예약/주문 바로가기 &rarr;
-            </a>
-        </div>
-    </section>
 
-    <section id="features" class="py-20 px-4 md:px-8">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 text-red-700">왜 [전원원] 샤브샤브인가요?</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="bg-white p-6 rounded-xl shadow-2xl overflow-hidden">
-                    <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-md">
-                        <source src="video/z01.mp4" type="video/mp4">
-                        <img src="https://placehold.co/600x400/fecaca/9f1239?text=Fresh+Meat" alt="신선한 육류">
-                    </video>
-                    <h3 class="text-2xl font-semibold mb-3">🥇 최상급 마블링 육류</h3>
-                    <p class="text-gray-600">
-                        엄선된 1등급 소고기/돼지고기를 사용합니다. 눈으로 확인하는 선명한 마블링과 입안에서 사르르 녹는 부드러움을 느껴보세요. (영상 출처: z01.mp4)
-                    </p>
-                </div>
-
-                <div class="bg-white p-6 rounded-xl shadow-2xl overflow-hidden">
-                    <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-md">
-                        <source src="video/z02.mp4" type="video/mp4">
-                        <img src="https://placehold.co/600x400/d1fae5/065f46?text=Vegetable+Platter" alt="다채로운 채소">
-                    </video>
-                    <h3 class="text-2xl font-semibold mb-3">🌿 매일 공수하는 싱싱한 채소</h3>
-                    <p class="text-gray-600">
-                        배추, 청경채, 버섯 등 샤브샤브에 최적화된 채소들을 매일 아침 직송받아 제공합니다. 건강하고 아삭한 식감을 즐기세요. (영상 출처: z02.mp4)
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 md:px-8 bg-white/70">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-red-700">즐거운 순간의 마무리</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <section class="bg-white p-6 md:p-8 rounded-xl shadow-2xl mb-12 border-t-4 border-red-600">
+                <h2 class="text-2xl font-bold mb-4 text-red-600">후기 작성하기</h2>
                 
-                <div class="md:col-span-2 p-6 rounded-xl shadow-xl bg-gray-50 overflow-hidden">
-                    <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-lg">
-                        <source src="video/z03.mp4" type="video/mp4">
-                        <img src="https://placehold.co/800x450/e0f2f1/1f2937?text=Dining+Experience" alt="식사 장면">
-                    </video>
-                    <h3 class="text-2xl font-semibold mb-2">🧑‍🤝‍🧑 모두가 만족하는 식사 경험</h3>
-                    <p class="text-gray-600">
-                        가족, 연인, 직장 동료 등 소중한 사람들과 함께 맛있는 음식을 나누며 특별한 추억을 만들어보세요. (영상 출처: z03.mp4)
+                <form id="commentForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2">⭐ 만족도 평가 (별점)</label>
+                        <div class="flex space-x-1 text-2xl text-yellow-500">
+                            <input type="radio" id="star5" name="rating" value="5" class="hidden">
+                            <label for="star5" class="cursor-pointer">★</label>
+                            <input type="radio" id="star4" name="rating" value="4" class="hidden">
+                            <label for="star4" class="cursor-pointer">★</label>
+                            <input type="radio" id="star3" name="rating" value="3" class="hidden">
+                            <label for="star3" class="cursor-pointer">★</label>
+                            <input type="radio" id="star2" name="rating" value="2" class="hidden">
+                            <label for="star2" class="cursor-pointer">★</label>
+                            <input type="radio" id="star1" name="rating" value="1" class="hidden">
+                            <label for="star1" class="cursor-pointer">★</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="author" class="block text-gray-700 font-semibold mb-2">닉네임</label>
+                        <input type="text" id="author" name="author" required placeholder="예: 샤브샤브매니아" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="comment" class="block text-gray-700 font-semibold mb-2">후기 내용</label>
+                        <textarea id="comment" name="comment" rows="5" required placeholder="육수가 진하고 고기가 정말 신선했어요!" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-[1.01]">
+                        후기 등록하기
+                    </button>
+                </form>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-red-700 border-b pb-2 border-red-300">최신 고객 후기 (4개)</h2>
+
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">샤브샤브의 정석! (5점)</span>
+                        <span class="text-sm text-gray-500">2025-10-28</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        육수가 깔끔하고 깊은 맛이 나네요. 채소도 싱싱하고 특히 고기 마블링이 환상적입니다. 재방문 의사 100%!
                     </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 강남미식가
+                    </footer>
+                </article>
+
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">아이들과 함께 즐거운 식사 (4점)</span>
+                        <span class="text-sm text-gray-500">2025-10-25</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        가족 외식으로 왔는데 모두 만족했어요. 마지막 칼국수까지 완벽하게 마무리했습니다. 직원분들도 친절하셨습니다!
+                    </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 행복한맘
+                    </footer>
+                </article>
+
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">점심 특선 가성비 최고! (5점)</span>
+                        <span class="text-sm text-gray-500">2025-10-22</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        평일 점심 특선으로 먹었는데 이 가격에 이 퀄리티라니 놀라워요. 자주 애용할 것 같습니다.
+                    </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 직장인K
+                    </footer>
+                </article>
+                
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">채소가 싱싱해요! (4점)</span>
+                        <span class="text-sm text-gray-500">2025-10-18</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        채소가 정말 싱싱해서 좋았습니다. 다만, 주말 저녁에는 웨이팅이 좀 기네요!
+                    </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 건강이최고
+                    </footer>
+                </article>
+
+                <div class="flex justify-center mt-8">
+                    <div class="flex space-x-1">
+                        <a href="#" class="px-4 py-2 text-sm font-semibold rounded-lg bg-red-600 text-white">1</a>
+                        <a href="#" class="px-4 py-2 text-sm font-semibold rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300">2</a>
+                        <a href="#" class="px-4 py-2 text-sm font-semibold rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300">3</a>
+                    </div>
                 </div>
 
-                <div class="md:col-span-1 flex flex-col justify-center items-center text-center p-6 rounded-xl shadow-xl bg-red-50 border-2 border-red-200">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-red-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 8a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1zm1 3a1 1 0 100 2h4a1 1 0 100-2H8z" clip-rule="evenodd" />
-                    </svg>
-                    <h3 class="text-2xl font-semibold mb-2 text-red-700">🍜 칼국수 &amp; 영양죽</h3>
-                    <p class="text-gray-700">
-                        진하게 우러난 육수에 칼국수 또는 고소한 영양죽으로 완벽한 마무리를 경험하세요. 샤브샤브 코스의 화룡점정입니다.
-                    </p>
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-    <section id="cta" class="py-16 px-4 md:px-8 bg-red-700 text-white">
-        <div class="max-w-6xl mx-auto text-center">
-            
-            <div class="bg-red-800 p-6 md:p-10 rounded-xl shadow-3xl mb-12 border-4 border-yellow-300">
-                <h2 class="text-4xl font-extrabold mb-2 text-yellow-300">🎉 특별 이벤트! 놓치지 마세요!</h2>
-                <p class="text-2xl mb-4 font-semibold">
-                    평일 **점심 특선** 1인분 **12,900원**! (오후 3시까지)
-                </p>
-                <p class="text-xl">
-                    *현재 오픈 기념 2+1 이벤트 진행 중! (자세한 내용은 매장 문의)*
-                </p>
-            </div>
-
-            <h3 class="text-3xl font-bold mb-8">지금 바로 예약하고 샤브샤브를 즐기세요!</h3>
-            
-            <div class="flex flex-col md:flex-row justify-center gap-6">
-                
-                <a href="tel:000-0000-0000" class="flex items-center justify-center bg-white text-red-700 hover:bg-gray-100 text-xl font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.772-1.549a1 1 0 011.06-.54l4.435.74A1 1 0 0118 16.847V17a1 1 0 01-1 1H3a1 1 0 01-1-1v-14z" />
-                    </svg>
-                    전화 예약하기
-                </a>
-
-                <a href="[배달앱_링크_입력]" target="_blank" class="flex items-center justify-center bg-gray-800 text-white hover:bg-gray-900 text-xl font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 20 20" fill="currentColor">
-                      <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 10a1 1 0 002 0V8a1 1 0 10-2 0v2zM7.5 7a.5.5 0 000 1h5a.5.5 0 000-1h-5z" clip-rule="evenodd" />
-                      <path d="M11 12a1 1 0 10-2 0v2a1 1 0 102 0v-2z" />
-                    </svg>
-                    배달 주문하기
-                </a>
-                
-            </div>
-            
-        </div>
-    </section>
+    </main>
     
     <footer class="py-8 bg-gray-900 text-white text-center text-sm">
         <div class="max-w-6xl mx-auto">
