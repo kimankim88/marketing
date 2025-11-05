@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2LT4HSDV7W"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2LT4HSDV7W"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -15,7 +14,6 @@
 </script>
     
     
-    <!-- 오픈그래프 설정 -->
     <meta property="og:title" content="전원원 - 신선함이 끓어오르는 곳">
     <meta property="og:description" content="프리미엄 샤브샤브 전원원, 신선함이 끓어오르는 순간.">
     <meta property="og:image" content="img01.jpg">
@@ -23,9 +21,7 @@
     <meta property="og:type" content="website">
 
     <title>♨️ [전원원] 샤브샤브: 신선함이 끓어오르는 곳</title>
-    <!-- Tailwind CSS CDN 로드 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter 폰트 설정 -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
         body {
@@ -68,16 +64,38 @@
             width: 100%;
             height: auto;
         }
+        
+        /* 추가된 네비게이션 바 스타일 */
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50; /* 히어로 오버레이보다 위에 위치 */
+            background-color: rgba(0, 0, 0, 0.6); /* 반투명 배경 */
+        }
+        /* 히어로 섹션에 네비게이션 바 공간을 확보하기 위한 패딩 추가 */
+        .hero-container {
+            padding-top: 64px; /* 네비게이션 높이 (h-16)에 맞춤 */
+        }
     </style>
 </head>
 <body class="text-gray-900">
 
-    <!-- 1. 히어로 섹션 (Hero Section) - 배경 비디오 (z00.mp4) -->
+    <nav class="nav-fixed h-16 flex justify-between items-center px-4 md:px-8 shadow-lg">
+        <div class="text-xl font-bold text-white">
+            <a href="/">♨️ [전원원] 샤브샤브</a>
+        </div>
+        <div class="flex space-x-6">
+            <a href="#features" class="text-white hover:text-red-300 transition duration-300">메뉴 소개</a>
+            <a href="#cta" class="text-white hover:text-red-300 transition duration-300">예약/이벤트</a>
+            <a href="usercomment.html" class="text-yellow-300 font-bold hover:text-yellow-100 transition duration-300">고객 후기</a>
+        </div>
+    </nav>
+    
     <section class="hero-container flex flex-col justify-center items-center text-white">
-        <!-- z00.mp4: 끓는 육수와 재료 투입 (슬로우 모션) -->
         <video playsinline autoplay muted loop class="hero-video">
             <source src="video/z00.mp4" type="video/mp4">
-            <!-- 사용자 브라우저가 비디오를 지원하지 않을 경우 대체 이미지 표시 -->
             <img src="https://placehold.co/1920x1080/7e3a3a/ffffff?text=Video+Not+Supported" alt="샤브샤브 한상차림" class="min-w-full min-h-full object-cover">
         </video>
         <div class="overlay"></div>
@@ -94,13 +112,11 @@
         </div>
     </section>
 
-    <!-- 2. 핵심 가치 소개 섹션 -->
     <section id="features" class="py-20 px-4 md:px-8">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 text-red-700">왜 [전원원] 샤브샤브인가요?</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- FEATURE 1: 신선한 육류 (z01.mp4) -->
                 <div class="bg-white p-6 rounded-xl shadow-2xl overflow-hidden">
                     <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-md">
                         <source src="video/z01.mp4" type="video/mp4">
@@ -112,7 +128,6 @@
                     </p>
                 </div>
 
-                <!-- FEATURE 2: 다채로운 채소 (z02.mp4) -->
                 <div class="bg-white p-6 rounded-xl shadow-2xl overflow-hidden">
                     <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-md">
                         <source src="video/z02.mp4" type="video/mp4">
@@ -128,14 +143,12 @@
         </div>
     </section>
 
-    <!-- 3. 매장 경험 및 마무리 섹션 -->
     <section class="py-20 px-4 md:px-8 bg-white/70">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-red-700">즐거운 순간의 마무리</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <!-- CONTENT 1: 함께하는 즐거움 (z03.mp4) -->
                 <div class="md:col-span-2 p-6 rounded-xl shadow-xl bg-gray-50 overflow-hidden">
                     <video playsinline autoplay muted loop class="content-video rounded-lg mb-4 shadow-lg">
                         <source src="video/z03.mp4" type="video/mp4">
@@ -147,7 +160,6 @@
                     </p>
                 </div>
 
-                <!-- CONTENT 2: 마무리의 화룡점정 (정적 요소) -->
                 <div class="md:col-span-1 flex flex-col justify-center items-center text-center p-6 rounded-xl shadow-xl bg-red-50 border-2 border-red-200">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-red-600 mb-4" viewBox="0 0 20 20" fill="currentColor">
                       <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 8a1 1 0 011-1h4a1 1 0 110 2H8a1 1 0 01-1-1zm1 3a1 1 0 100 2h4a1 1 0 100-2H8z" clip-rule="evenodd" />
@@ -161,11 +173,9 @@
         </div>
     </section>
 
-    <!-- 4. 이벤트 및 CTA (Call to Action) 섹션 -->
     <section id="cta" class="py-16 px-4 md:px-8 bg-red-700 text-white">
         <div class="max-w-6xl mx-auto text-center">
             
-            <!-- 이벤트 배너 (z04.mp4 - 대체 사용) -->
             <div class="bg-red-800 p-6 md:p-10 rounded-xl shadow-3xl mb-12 border-4 border-yellow-300">
                 <h2 class="text-4xl font-extrabold mb-2 text-yellow-300">🎉 특별 이벤트! 놓치지 마세요!</h2>
                 <p class="text-2xl mb-4 font-semibold">
@@ -178,10 +188,8 @@
 
             <h3 class="text-3xl font-bold mb-8">지금 바로 예약하고 샤브샤브를 즐기세요!</h3>
             
-            <!-- CTA 버튼 그룹 -->
             <div class="flex flex-col md:flex-row justify-center gap-6">
                 
-                <!-- 예약 버튼 -->
                 <a href="tel:000-0000-0000" class="flex items-center justify-center bg-white text-red-700 hover:bg-gray-100 text-xl font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 20 20" fill="currentColor">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.772-1.549a1 1 0 011.06-.54l4.435.74A1 1 0 0118 16.847V17a1 1 0 01-1 1H3a1 1 0 01-1-1v-14z" />
@@ -189,7 +197,6 @@
                     전화 예약하기
                 </a>
 
-                <!-- 배달 주문 버튼 -->
                 <a href="[배달앱_링크_입력]" target="_blank" class="flex items-center justify-center bg-gray-800 text-white hover:bg-gray-900 text-xl font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 20 20" fill="currentColor">
                       <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 10a1 1 0 002 0V8a1 1 0 10-2 0v2zM7.5 7a.5.5 0 000 1h5a.5.5 0 000-1h-5z" clip-rule="evenodd" />
@@ -203,7 +210,6 @@
         </div>
     </section>
     
-    <!-- 5. 푸터 (Footer) -->
     <footer class="py-8 bg-gray-900 text-white text-center text-sm">
         <div class="max-w-6xl mx-auto">
             <p class="mb-2">[전원원] | 주소: 서울특별시 OOO구 OOO동 123-4 | 전화번호: 000-0000-0000</p>
@@ -213,10 +219,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
