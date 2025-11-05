@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 고객 후기 | 전원원 샤브샤브</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3f0; /* 따뜻한 배경색 */
+        }
+        /* 네비게이션 바 고정 스타일 */
+        .nav-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 50;
+            background-color: rgba(0, 0, 0, 0.8); /* index.html보다 조금 더 진하게 설정 */
+        }
+        main {
+            padding-top: 80px; /* 고정된 네비게이션 바 높이만큼 공간 확보 */
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <nav class="nav-fixed h-16 flex justify-between items-center px-4 md:px-8 shadow-lg">
+        <div class="text-xl font-bold text-white">
+            <a href="index.html">♨️ [전원원] 샤브샤브</a>
+        </div>
+        <div class="flex space-x-6">
+            <a href="index.html#features" class="text-white hover:text-red-300 transition duration-300">메뉴 소개</a>
+            <a href="index.html#cta" class="text-white hover:text-red-300 transition duration-300">예약/이벤트</a>
+            <a href="#" class="text-yellow-300 font-bold hover:text-yellow-100 transition duration-300">고객 후기</a>
+        </div>
+    </nav>
+
+    <main class="min-h-screen">
+        <div class="max-w-4xl mx-auto py-12 px-4">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-center mb-10 text-red-700">
+                ⭐ 고객 후기 게시판
+            </h1>
+            <p class="text-center text-lg text-gray-600 mb-10">
+                [전원원]에서 경험하신 신선하고 따뜻한 순간을 공유해 주세요!
+            </p>
+
+            <section class="bg-white p-6 md:p-8 rounded-xl shadow-2xl mb-12 border-t-4 border-red-600">
+                <h2 class="text-2xl font-bold mb-4 text-red-600">후기 작성하기</h2>
+                
+                <form id="commentForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-semibold mb-2">⭐ 만족도 평가 (별점)</label>
+                        <div class="flex space-x-1 text-2xl text-yellow-500">
+                            <input type="radio" id="star5" name="rating" value="5" class="hidden">
+                            <label for="star5" class="cursor-pointer">★</label>
+                            <input type="radio" id="star4" name="rating" value="4" class="hidden">
+                            <label for="star4" class="cursor-pointer">★</label>
+                            <input type="radio" id="star3" name="rating" value="3" class="hidden">
+                            <label for="star3" class="cursor-pointer">★</label>
+                            <input type="radio" id="star2" name="rating" value="2" class="hidden">
+                            <label for="star2" class="cursor-pointer">★</label>
+                            <input type="radio" id="star1" name="rating" value="1" class="hidden">
+                            <label for="star1" class="cursor-pointer">★</label>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="author" class="block text-gray-700 font-semibold mb-2">닉네임</label>
+                        <input type="text" id="author" name="author" required placeholder="예: 샤브샤브매니아" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500">
+                    </div>
+                    
+                    <div class="mb-6">
+                        <label for="comment" class="block text-gray-700 font-semibold mb-2">후기 내용</label>
+                        <textarea id="comment" name="comment" rows="5" required placeholder="육수가 진하고 고기가 정말 신선했어요!" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-red-500 focus:border-red-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-[1.01]">
+                        후기 등록하기
+                    </button>
+                </form>
+            </section>
+
+            <section>
+                <h2 class="text-2xl font-bold mb-6 text-red-700 border-b pb-2 border-red-300">최신 고객 후기 (4개)</h2>
+
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">샤브샤브의 정석! (5점)</span>
+                        <span class="text-sm text-gray-500">2025-10-28</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        육수가 깔끔하고 깊은 맛이 나네요. 채소도 싱싱하고 특히 고기 마블링이 환상적입니다. 재방문 의사 100%!
+                    </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 강남미식가
+                    </footer>
+                </article>
+
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">아이들과 함께 즐거운 식사 (4점)</span>
+                        <span class="text-sm text-gray-500">2025-10-25</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        가족 외식으로 왔는데 모두 만족했어요. 마지막 칼국수까지 완벽하게 마무리했습니다. 직원분들도 친절하셨습니다!
+                    </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 행복한맘
+                    </footer>
+                </article>
+
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">점심 특선 가성비 최고! (5점)</span>
+                        <span class="text-sm text-gray-500">2025-10-22</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        평일 점심 특선으로 먹었는데 이 가격에 이 퀄리티라니 놀라워요. 자주 애용할 것 같습니다.
+                    </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 직장인K
+                    </footer>
+                </article>
+                
+                <article class="bg-white p-5 rounded-xl shadow-md mb-4 border-l-4 border-yellow-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xl font-bold text-gray-800">채소가 싱싱해요! (4점)</span>
+                        <span class="text-sm text-gray-500">2025-10-18</span>
+                    </div>
+                    <p class="text-gray-600 mb-3">
+                        채소가 정말 싱싱해서 좋았습니다. 다만, 주말 저녁에는 웨이팅이 좀 기네요!
+                    </p>
+                    <footer class="text-sm text-red-500 font-medium">
+                        - 닉네임: 건강이최고
+                    </footer>
+                </article>
+
+                <div class="flex justify-center mt-8">
+                    <div class="flex space-x-1">
+                        <a href="#" class="px-4 py-2 text-sm font-semibold rounded-lg bg-red-600 text-white">1</a>
+                        <a href="#" class="px-4 py-2 text-sm font-semibold rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300">2</a>
+                        <a href="#" class="px-4 py-2 text-sm font-semibold rounded-lg bg-white text-gray-700 hover:bg-gray-100 border border-gray-300">3</a>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+    
+    <footer class="py-8 bg-gray-900 text-white text-center text-sm">
+        <div class="max-w-6xl mx-auto">
+            <p class="mb-2">[전원원] | 주소: 서울특별시 OOO구 OOO동 123-4 | 전화번호: 000-0000-0000</p>
+            <p>Copyright &copy; 2025 [전원원] Shabu-shabu. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
